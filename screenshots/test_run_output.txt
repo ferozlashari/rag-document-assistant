@@ -1,0 +1,21 @@
+== loaders: chunking ==
+  PASS: produces multiple chunks
+  PASS: chunks respect rough size target
+== loaders: real PDF extraction ==
+  PASS: extracts text from real PDF
+  PASS: preserves page numbers
+== embeddings: LocalTfidfEmbeddings ==
+  PASS: returns one vector per chunk
+  PASS: query vector matches doc vector dimensionality
+== vectorstore: NumpyVectorStore ==
+  PASS: store length matches chunks added
+  PASS: search returns results
+  PASS: results are sorted by descending score
+== full RAG pipeline (mirrors main.py) ==
+  PASS: ingestion returns chunk count
+  PASS: answers vacation question correctly
+  PASS: returns source citations
+  PASS: answers reimbursement question correctly
+  PASS: handles empty pipeline gracefully
+
+14 passed, 0 failed
